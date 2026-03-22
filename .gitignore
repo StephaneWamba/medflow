@@ -50,3 +50,8 @@ CLAUDE.md
 
 # Cache
 .cache/
+
+# Local tooling
+.claude/
+.playwright-mcp/
+.dockerignore
