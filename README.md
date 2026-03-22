@@ -2,7 +2,7 @@
 
 **Telemedicine platform** — patients book secure video consultations with licensed doctors, receive digital prescriptions, and manage their health records in one place.
 
-**Live:** [medflow-five.vercel.app](https://medflow-five.vercel.app) · **API:** [medflow-api.fly.dev/api/v1](https://medflow-api.fly.dev/api/v1)
+**Live:** [medflow-five.vercel.app](https://medflow-five.vercel.app)
 
 ![MedFlow](./image.png)
 
