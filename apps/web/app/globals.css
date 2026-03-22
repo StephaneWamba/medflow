@@ -1,0 +1,113 @@
+@import "tailwindcss";
+
+/* ─── Design Tokens ────────────────────────────────────────────────────── */
+@theme {
+  /* Brand — deep medical teal */
+  --color-brand-50:  oklch(0.97 0.015 193);
+  --color-brand-100: oklch(0.93 0.035 193);
+  --color-brand-200: oklch(0.86 0.065 193);
+  --color-brand-300: oklch(0.76 0.090 193);
+  --color-brand-400: oklch(0.65 0.105 193);
+  --color-brand-500: oklch(0.53 0.115 193);
+  --color-brand-600: oklch(0.44 0.110 193);
+  --color-brand-700: oklch(0.37 0.100 193);
+  --color-brand-800: oklch(0.29 0.082 193);
+  --color-brand-900: oklch(0.22 0.060 193);
+
+  /* Canvas — warm ivory */
+  --color-canvas:    oklch(0.985 0.005 80);
+  --color-surface:   #ffffff;
+  --color-surface-2: oklch(0.978 0.004 80);
+  --color-border:    oklch(0.906 0.006 80);
+  --color-border-2:  oklch(0.875 0.008 80);
+
+  /* Text */
+  --color-fg:        oklch(0.175 0.012 255);
+  --color-fg-muted:  oklch(0.480 0.010 255);
+  --color-fg-subtle: oklch(0.640 0.008 255);
+
+  /* Status */
+  --color-success:   oklch(0.520 0.140 147);
+  --color-warning:   oklch(0.720 0.145  62);
+  --color-danger:    oklch(0.525 0.180  25);
+
+  /* Typography */
+  --font-display: var(--font-instrument-serif), "Georgia", serif;
+  --font-sans:    var(--font-dm-sans), "system-ui", sans-serif;
+
+  /* Radii */
+  --radius-xs:   4px;
+  --radius-sm:   6px;
+  --radius-md:   10px;
+  --radius-lg:   14px;
+  --radius-xl:   20px;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-xs: 0 1px 2px oklch(0.175 0.012 255 / 0.04);
+  --shadow-sm: 0 1px 3px oklch(0.175 0.012 255 / 0.06), 0 2px 6px oklch(0.175 0.012 255 / 0.04);
+  --shadow-md: 0 2px 6px oklch(0.175 0.012 255 / 0.06), 0 6px 20px oklch(0.175 0.012 255 / 0.06);
+  --shadow-lg: 0 4px 12px oklch(0.175 0.012 255 / 0.08), 0 16px 40px oklch(0.175 0.012 255 / 0.08);
+}
+
+/* ─── Base ──────────────────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; text-rendering: optimizeLegibility; }
+
+body {
+  background-color: var(--color-canvas);
+  color: var(--color-fg);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100dvh;
+}
+
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--color-border-2); border-radius: 9999px; }
+::-webkit-scrollbar-thumb:hover { background: var(--color-fg-subtle); }
+
+:focus-visible {
+  outline: 2px solid var(--color-brand-500);
+  outline-offset: 2px;
+}
+
+::selection { background: oklch(0.86 0.065 193 / 0.4); }
+
+/* ─── Helpers ───────────────────────────────────────────────────────────── */
+.font-display { font-family: var(--font-display); }
+
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+.gradient-text {
+  background: linear-gradient(135deg, var(--color-brand-700) 0%, var(--color-brand-500) 60%, oklch(0.52 0.12 210) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.glass {
+  background: oklch(1 0 0 / 0.8);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border: 1px solid oklch(1 0 0 / 0.3);
+}
+
+.section { padding-block: clamp(4rem, 8vw, 7rem); }
+
+.container-xl {
+  width: 100%;
+  max-width: 1280px;
+  margin-inline: auto;
+  padding-inline: clamp(1.25rem, 4vw, 2.5rem);
+}
+
+.container-lg {
+  width: 100%;
+  max-width: 1080px;
+  margin-inline: auto;
+  padding-inline: clamp(1.25rem, 4vw, 2.5rem);
+}

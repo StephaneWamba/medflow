@@ -1,0 +1,52 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Build outputs
+dist/
+.next/
+.turbo/
+*.tsbuildinfo
+
+# Environment variables
+.env
+*.env
+*.env.local
+*.env.*.local
+
+# Generated Prisma client
+packages/db/generated/
+
+# Logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.idea/
+*.swp
+*.swo
+
+# Vercel
+.vercel
+
+# Coverage
+coverage/
+
+# Prisma backups
+prisma/migrations/*.sql.bak
+
+# Debug screenshots
+livekit-*.png
+livekit-*.jpg
+
+# AI assistant context
+CLAUDE.md
+
+# Cache
+.cache/

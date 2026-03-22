@@ -1,0 +1,33 @@
+<svg viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="128" height="128" fill="#f5f0e8" rx="24"/>
+
+  <!-- Main icon: Flowing pulse/heartbeat -->
+  <g transform="translate(32, 42)">
+    <!-- Heartbeat line with flowing waves -->
+    <path
+      d="M 4 32 L 12 32 L 16 16 L 20 28 L 28 8 L 36 32 L 44 32 L 52 32 L 60 32"
+      stroke="#0d9488"
+      stroke-width="3"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      fill="none"
+    />
+
+    <!-- Flowing accent element below -->
+    <path
+      d="M 4 48 Q 16 44 28 48 T 60 48"
+      stroke="#14b8a6"
+      stroke-width="2.5"
+      stroke-linecap="round"
+      opacity="0.6"
+      fill="none"
+    />
+  </g>
+
+  <!-- Optional: subtle medical cross in corner -->
+  <g transform="translate(88, 12)" opacity="0.3">
+    <rect x="-2" y="-8" width="4" height="16" fill="#0d9488"/>
+    <rect x="-8" y="-2" width="16" height="4" fill="#0d9488"/>
+  </g>
+</svg>
